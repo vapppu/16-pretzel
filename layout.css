@@ -1,0 +1,44 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+#special {
+  background-color: darkslategrey;
+  background-image: url(./images/special-bg.png);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  padding: 1rem;
+  color: white;
+}
+header {
+  border-bottom: 1px solid grey;
+}
+nav {
+  padding-block: 2rem;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  column-gap: 1rem;
+  justify-content: center;
+}
+nav figure {
+  flex-basis: 100%;
+  flex-grow: 0;
+}
+nav figure img {
+  display: block;
+  margin: auto;
+}
+nav ul li {
+  flex-grow: 0;
+  flex-basis: 0;
+  text-transform: uppercase;
+}
+#wrapper {
+  margin-inline: 2rem;
+}
