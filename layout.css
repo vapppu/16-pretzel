@@ -1,19 +1,41 @@
+:root {
+  --light: 254, 250, 244;
+  --cream: 248, 235, 203;
+  --blue-gray: 106, 128, 134;
+  --logo-blue: 62, 163, 197;
+}
+
 html {
   font-size: 62.5%;
 }
 body {
   font-size: 1.6rem;
+  line-height: normal;
+  background-color: rgba(var(--light));
+  background-image: url(images/grunge.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 #special {
-  background-color: darkslategrey;
+  background-color: rgba(var(--blue-gray));
   background-image: url(./images/special-bg.png);
   background-position: bottom;
   background-repeat: repeat-x;
-  padding: 1rem;
+  padding: 1.5rem;
   color: white;
+  font-family: serif;
 }
+
 header {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgba(var(--blue-gray));
+}
+em {
+  text-transform: uppercase;
+  font-family: sans-serif;
 }
 nav {
   padding-block: 2rem;
@@ -37,8 +59,7 @@ nav figure img {
 nav ul li {
   flex-grow: 0;
   flex-basis: 0;
-  text-transform: uppercase;
 }
 #wrapper {
-  margin-inline: 2rem;
+  padding-inline: 2rem;
 }
