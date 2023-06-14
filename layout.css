@@ -170,16 +170,17 @@ footer p {
   #maincontent {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 2rem;
     align-items: flex-start;
   }
-  main {
+  #maincontent > * {
     flex-basis: 0;
+  }
+  main {
     flex-grow: 3;
   }
   aside {
-    flex-basis: 0;
     flex-grow: 2;
   }
 }
