@@ -4,12 +4,13 @@
   --blue-gray: 106, 128, 134;
   --logo-blue: 62, 163, 197;
 }
-
 html {
   font-size: 62.5%;
 }
 body {
+  font-family: "Cormorant Garamond";
   font-size: 1.6rem;
+  font-weight: 500;
   line-height: normal;
   background-color: rgba(var(--light));
   background-image: url(images/grunge.png);
@@ -17,6 +18,20 @@ body {
   background-position: top;
 }
 a {
+  color: rgba(var(--logo-blue));
+}
+p,
+div.intro,
+h1,
+h2,
+menu,
+article,
+section,
+.side-menu,
+figure {
+  margin-block-end: 1rem;
+}
+nav a {
   text-decoration: none;
   color: inherit;
 }
@@ -27,18 +42,22 @@ a {
   background-repeat: repeat-x;
   padding: 1.5rem;
   color: white;
-  font-family: serif;
 }
-
 header {
   border-bottom: 1px solid rgba(var(--blue-gray));
+  margin-block-end: 2rem;
 }
 em {
   text-transform: uppercase;
-  font-family: sans-serif;
+  font-family: "Josefin sans";
+  font-weight: 400;
+  letter-spacing: 0.15rem;
 }
 nav {
   padding-block: 2rem;
+  font-family: "Josefin sans";
+  color: rgba(var(--blue-gray));
+  font-weight: 300;
 }
 nav ul {
   display: flex;
@@ -59,7 +78,108 @@ nav figure img {
 nav ul li {
   flex-grow: 0;
   flex-basis: 0;
+  display: block;
+}
+small {
+  display: none;
+}
+.active {
+  color: black;
 }
 #wrapper {
   padding-inline: 2rem;
+}
+h1 {
+  display: inline;
+}
+.intro span {
+  font-size: 1.8rem;
+}
+main p {
+  text-align: justify;
+}
+main img {
+  display: block;
+  max-width: 100%;
+}
+.callout {
+  background-color: rgba(var(--cream));
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.callout p {
+  margin-block-end: 0;
+}
+aside {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+aside > * {
+  flex-basis: 100%;
+  flex-grow: 1;
+}
+aside h2 {
+  text-transform: uppercase;
+}
+aside menu {
+  list-style: none;
+  column-count: 1;
+}
+.side-menu {
+  border-block-end: 1px solid rgba(var(--blue-gray));
+}
+footer {
+  font-size: 1.4rem;
+  color: rgba(var(--blue-gray));
+  text-align: center;
+  padding-block: 1rem;
+}
+footer em {
+  font-weight: 300;
+}
+footer p {
+  margin-block-end: 2rem;
+}
+
+@media screen and (min-width: 426px) {
+  nav ul li,
+  nav ul figure {
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+  }
+  nav ul {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  nav ul img {
+    margin-inline: 0;
+  }
+  aside menu {
+    column-count: 2;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  small {
+    display: block;
+    padding-top: 0.3rem;
+  }
+  #maincontent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  main {
+    flex-basis: 0;
+    flex-grow: 3;
+  }
+  aside {
+    flex-basis: 0;
+    flex-grow: 2;
+  }
 }
